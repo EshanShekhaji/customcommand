@@ -7,9 +7,15 @@ def epic():
 def exitx():
     exit()
 
+def print_help():
+    print('''
+this
+is
+it
+        ''')
+
 cmnd_list = {
     'epic': epic,
-    'exit': exitx
+    'exit': exitx,
+    'help': print_help
 }
-
-print ("ia m here")
