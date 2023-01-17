@@ -72,5 +72,6 @@ cmnd_list = {
     'yt': youtube,
     'trello': trello,
     'unity': unity,
-    'kite': kite
+    'kite': kite,
+    
 }
