@@ -5,25 +5,56 @@ import time
 
 def print_help():
     print('''
- CCLI v0.3b
+ CCLI v1.0
  Custom CLI made to make terminal life easier.
 
  Here is a list of commands specific to CCLI:
 
-GENERAL:
+GENERAL
 help:   displays this screen
 exit:   exits the program
 cmd:    cmd mode
 python: python mode
+login:  login with your privileged account credentials
 
-SYSTEM:
+SYSTEM
 unity:  starts unity hub
 epic:   starts epic games launcher
 
-BROWSER:
+BROWSER
 yt:     opens https://youtube.com
 trello: opens https://trello.com
 kite:   opens https://kite.zerodha.com and https://pro.upstox.com
+
+SUDO
+[Commands hidden. Login with a privileged account to view sudo commands]
+        ''')
+
+def print_priv_help():
+    print('''
+ CCLI v1.0
+ Custom CLI made to make terminal life easier.
+
+ Here is a list of commands specific to CCLI:
+
+GENERAL
+help:   displays this screen
+exit:   exits the program
+cmd:    cmd mode
+python: python mode
+login:  login with your privileged account credentials
+
+SYSTEM
+unity:  starts unity hub
+epic:   starts epic games launcher
+
+BROWSER
+yt:     opens https://youtube.com
+trello: opens https://trello.com
+kite:   opens https://kite.zerodha.com and https://pro.upstox.com
+
+SUDO
+logout: logs you out of your account, denying access to sudo commands
         ''')
 
 
@@ -63,6 +94,26 @@ def kite():
     webbrowser.open_new_tab("https://pro.upstox.com")
     webbrowser.open_new_tab("https://kite.zerodha.com")
 
+privileged = False
+def logout():
+    global privileged
+    privileged = False
+
+password = '9164'
+
+def login():
+    pwd = input('password for "koei": ')
+    global privileged
+    privileged = False
+    if password == pwd:
+        privileged = True
+        print('You are now logged in as koei!')
+        print('Greetings from CCLI!')
+    else: 
+        print("Incorrect password!")
+        privileged = False
+    return privileged
+
 cmnd_list = {
     'epic': epic,
     'exit': exitx,
@@ -73,5 +124,19 @@ cmnd_list = {
     'trello': trello,
     'unity': unity,
     'kite': kite,
-
 }
+
+priv_cmnd_list = {
+    'epic': epic,
+    'exit': exitx,
+    'help': print_priv_help,
+    'python': python,
+    'cmd': cmd,
+    'yt': youtube,
+    'trello': trello,
+    'unity': unity,
+    'kite': kite,
+    'logout': logout
+}
+
+
