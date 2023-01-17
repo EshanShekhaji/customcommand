@@ -5,7 +5,7 @@ import time
 
 def print_help():
     print('''
- CCLI v0.1b
+ CCLI v0.3b
  Custom CLI made to make terminal life easier.
 
  Here is a list of commands specific to CCLI:
@@ -73,5 +73,5 @@ cmnd_list = {
     'trello': trello,
     'unity': unity,
     'kite': kite,
-    
+
 }

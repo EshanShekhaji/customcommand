@@ -2,7 +2,7 @@ import os
 from commands import cmnd_list
 from commands import *
 
-print(' CCLI v0.1b (unstable)')
+print(' CCLI v0.3b (unstable)')
 print(' Type "help" for a list of available commands.\n')
 
 
