@@ -1,14 +1,11 @@
 import os
 import commands
+import datetime
 from commands import cmnd_list
 from commands import *
 
-print('''
-    Custom Command Console v0
-    All cmd commands are available as well as some custom ones.
-    Jump in and out of cmd by typing 'cmd'. Exit using "exit".
-''')
-
+print(' CCLI v0.1b (unstable)')
+print(' Type "help" for a list of available commands.')
 
 
 def process_cmnd(cmnd):
@@ -22,10 +19,7 @@ def identify_cmnd(cmnd):
 def cmd_cmnd(cmnd):
     os.system(f'cmd /c {cmnd}')
 
-
-exit = False
-while exit == False:
+while True:
     cmnd = input(">>> ")
     identify_cmnd(cmnd)
-    exit == False
 
