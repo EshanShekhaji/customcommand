@@ -5,20 +5,27 @@ import time
 
 def print_help():
     print('''
-CCLI v0.1b
-Custom CLI made to make terminal life easier.
-Here is a list of commands specific to CCLI:
+ CCLI v0.1b
+ Custom CLI made to make terminal life easier.
 
+ Here is a list of commands specific to CCLI:
+
+GENERAL:
 help:   displays this screen
-epic:   starts epic games launcher
 exit:   exits the program
 cmd:    cmd mode
 python: python mode
+
+SYSTEM:
+unity:  starts unity hub
+epic:   starts epic games launcher
+
+BROWSER:
+yt:     opens https://youtube.com
+trello: opens https://trello.com
+kite:   opens https://kite.zerodha.com and https://pro.upstox.com
         ''')
 
-def epic():
-    print("Process started: EpicGamesLauncher.exe")
-    os.startfile("E:\epicgames\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe")
 
 def exitx():
     print("Goodbye from CCLI!")
@@ -37,6 +44,24 @@ def youtube():
     print('Process started: chrome:https://youtube.com')
     webbrowser.open_new_tab('https://youtube.com')
 
+def trello():
+    print('Process started: chrome:https://trello.com')
+    webbrowser.open_new_tab('https://trello.com')
+
+def epic():
+    print("Process started: EpicGamesLauncher.exe")
+    os.startfile("E:\epicgames\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe")
+
+def unity():
+    print('Process started: UnityHub.exe')
+    print('a little bug happens here where the cursor move to the next line, just press enter :)')
+    os.startfile("E:\\Unity\\UnityHub\\Unity Hub\\Unity Hub.exe")
+
+def kite():
+    print('Process started: chrome:https://pro.upstox.com')
+    print('Process started: chrome:https://kite.zerodha.com')
+    webbrowser.open_new_tab("https://pro.upstox.com")
+    webbrowser.open_new_tab("https://kite.zerodha.com")
 
 cmnd_list = {
     'epic': epic,
@@ -45,4 +70,7 @@ cmnd_list = {
     'python': python,
     'cmd': cmd,
     'yt': youtube,
+    'trello': trello,
+    'unity': unity,
+    'kite': kite
 }

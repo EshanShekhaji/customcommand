@@ -1,11 +1,9 @@
 import os
-import commands
-import datetime
 from commands import cmnd_list
 from commands import *
 
 print(' CCLI v0.1b (unstable)')
-print(' Type "help" for a list of available commands.')
+print(' Type "help" for a list of available commands.\n')
 
 
 def process_cmnd(cmnd):
@@ -20,6 +18,6 @@ def cmd_cmnd(cmnd):
     os.system(f'cmd /c {cmnd}')
 
 while True:
-    cmnd = input(">>> ")
+    cmnd = input('>>> ')
     identify_cmnd(cmnd)
 
