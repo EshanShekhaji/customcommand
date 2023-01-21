@@ -4,7 +4,7 @@ from commands import priv_cmnd_list
 from commands import password
 from commands import login
 
-print("hello")
+print("ME WHEN THE")
 print(' CCLI v1.0')
 print(' Type "help" for a list of available commands.\n')
 
