@@ -29,6 +29,8 @@ def identify_priv_cmnd(cmnd):
         sudo = login()
     else: cmd_cmnd(cmnd)
 
+That the umm the uh
+
 def cmd_cmnd(cmnd):
     os.system(f'cmd /c {cmnd}')
 
