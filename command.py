@@ -4,7 +4,7 @@ from commands import priv_cmnd_list
 from commands import password
 from commands import login
 
-print("ME WHEN THE")
+print("")
 print(' CCLI v1.0')
 print(' Type "help" for a list of available commands.\n')
 
@@ -28,8 +28,6 @@ def identify_priv_cmnd(cmnd):
         global sudo
         sudo = login()
     else: cmd_cmnd(cmnd)
-
-That the umm the uh
 
 def cmd_cmnd(cmnd):
     os.system(f'cmd /c {cmnd}')
