@@ -99,7 +99,7 @@ def logout():
     global privileged
     privileged = False
 
-password = '9164'
+password = '0101'
 
 def login():
     pwd = input('password for "koei": ')
