@@ -38,20 +38,22 @@ def print_priv_help():
  Here is a list of commands specific to CCLI:
 
 GENERAL
-help:   displays this screen
-exit:   exits the program
-cmd:    cmd mode
-python: python mode
-login:  login with your privileged account credentials
+help:       displays this screen
+exit:       exits the program
+cmd:        cmd mode
+python:     python mode
+login:      login with your privileged account credentials
 
 SYSTEM
-unity:  starts unity hub
-epic:   starts epic games launcher
+unity:      starts unity hub
+epic:       starts epic games launcher
+photoshop:  starts photoshop
 
 BROWSER
-yt:     opens https://youtube.com
-trello: opens https://trello.com
-kite:   opens https://kite.zerodha.com and https://pro.upstox.com
+yt:         opens https://youtube.com
+kite:       opens https://kite.zerodha.com and https://pro.upstox.com
+trello:     opens https://trello.com
+reddit:     opens https://reddit.com
 
 SUDO
 logout: logs you out of your account, denying access to sudo commands
@@ -79,6 +81,13 @@ def trello():
     print('Process started: chrome:https://trello.com')
     webbrowser.open_new_tab('https://trello.com')
 
+def reddit():
+    print('Process started: chrome:https://reddit.com')
+
+def photoshop():
+    print("Process started: Photoshop.exe")
+    os.startfile("C:\Program Files\Adobe\Adobe Photoshop 2020\Photoshop.exe")
+
 def epic():
     print("Process started: EpicGamesLauncher.exe")
     os.startfile("E:\epicgames\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe")
@@ -93,6 +102,9 @@ def kite():
     print('Process started: chrome:https://kite.zerodha.com')
     webbrowser.open_new_tab("https://pro.upstox.com")
     webbrowser.open_new_tab("https://kite.zerodha.com")
+
+def hello():
+    print("General Kenobi!")
 
 privileged = False
 def logout():
@@ -124,6 +136,9 @@ cmnd_list = {
     'trello': trello,
     'unity': unity,
     'kite': kite,
+    'photoshop': photoshop,
+    'reddit': reddit,
+    'hello_there': hello
 }
 
 priv_cmnd_list = {
